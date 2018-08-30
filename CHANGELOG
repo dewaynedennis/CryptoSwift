@@ -1,6 +1,28 @@
+0.11.0
+- API: Cryptor.seek() is throwable
+- Adds proper stream support for CTR encryption with Updaptable interface.
+- Refactor internals for the stream cipher modes.
+- Set minimum deployment target to 8.0 (again).
+
+0.10.0
+- API: BlockMode is no longer an enum. Please migrate to eg. CBC() etc...
+- Adds AES-GCM support. #97 - Feature sponsored by GesundheitsCloud (http://www.gesundheitscloud.de/)
+- Adds CRC32c support.
+- Improves AES variant validation.
+- Fixes empty password in PBKDF2.
+
+0.9.0
+- Swift 4.1 compatibility
+- Added CMAC message authenticator https://tools.ietf.org/html/rfc4493
+- Added AEADChaCha20Poly1305 (AEAD_CHACHA20_POLY1305) https://tools.ietf.org/html/rfc7539#section-2.8.1
+
+0.8.3
+- Fixes SHA3 padding.
+- Fixes Carthage builds.
+
 0.8.2
-- Fix SHA3 partial updates calculations.
-- Make ChaCha20 processing faster again.
+- Fixes SHA3 partial updates calculations.
+- Makes ChaCha20 processing faster again.
 
 0.8.1
 - Adds Data(hex:) helper.
@@ -77,7 +99,7 @@
 - Set deployment targets for all platform. Fixes Carthage builds.
 - New: SHA-3 implementation (request #291)
 - SHA-1 conforms to Updatable protocol and may be calculated incrementally.
-- SHA-2 conforms to Updatable protocol and may be calculated incrementally. 
+- SHA-2 conforms to Updatable protocol and may be calculated incrementally.
 
 0.6.0
 - Remove bridge() workaround for Linux (not needed)
